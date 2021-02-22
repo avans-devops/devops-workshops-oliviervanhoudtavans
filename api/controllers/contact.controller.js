@@ -16,7 +16,7 @@ exports.index = (req, res) => {
       data: contacts,
     });
   });
-}; 
+};
 
 // Handle create user actions
 exports.new = (req, res) => {
