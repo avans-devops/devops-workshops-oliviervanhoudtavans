@@ -10,10 +10,11 @@
       ],
       "parserOptions": {
         "project": [
-          "frontend/tsconfig.json",
-          "frontend/e2e/tsconfig.json"
+          "tsconfig.json",
+          "e2e/tsconfig.json"
         ],
-        "createDefaultProgram": true
+        "createDefaultProgram": true,
+        "tsconfigRootDir": "./"
       },
       "extends": [
         "plugin:@angular-eslint/ng-cli-compat",
@@ -50,4 +51,5 @@
       "rules": {}
     }
   ]
+
 }
