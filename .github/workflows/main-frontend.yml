@@ -23,10 +23,9 @@ jobs:
       - name: devops-frontend
         run: |
           cd frontend
-          npm link @angular/cli
           npm install
           npm run build
-          yarn run eslint .
+          npx eslint .
           npm test
 
 
