@@ -25,7 +25,6 @@ jobs:
           cd frontend
           npm install
           npm run build
-          npx eslint .
           npm test
 
 
