@@ -24,7 +24,7 @@ jobs:
         run: |
           cd frontend
           npm install
-          ng build
+          npm run build
           yarn run eslint .
           npm test
 
