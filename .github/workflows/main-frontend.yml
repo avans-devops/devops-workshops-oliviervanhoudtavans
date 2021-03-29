@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-
+#     paths:
+#       - 'frontend/**'
 jobs:
 
   frontend:
@@ -22,7 +23,7 @@ jobs:
       - name: devops-frontend
         run: |
           cd frontend
-          ng build --prod 
+          ng build
           yarn run eslint .
           npm test
 
