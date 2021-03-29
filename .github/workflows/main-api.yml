@@ -7,8 +7,8 @@ on:
 
 jobs:
 
-  build:
-    name: Build
+  api:
+    name: API
     runs-on: ubuntu-latest
     
     strategy:
@@ -20,9 +20,9 @@ jobs:
       - uses: actions/setup-node@v1
 
       - name: Change directory to API
-        run: 
-          cd api
-          ls -l
+        run: cd api
+      - name: List
+        run: ls -l
       - name: Run npm ci
         run: npm ci
       - name: Run npm run build --if-present
@@ -31,4 +31,33 @@ jobs:
         run: npx run eslint .
       - name: Run npm test
         run: npm test
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
