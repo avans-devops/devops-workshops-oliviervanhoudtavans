@@ -1,10 +1,10 @@
 const username = process.env.USER_NAME || '';
 const password = process.env.PASSWORD || '';
-const host = process.env.HOST || '';
-const port = process.env.PORT || '';
-const database = process.env.DATABASE || '';
+const host = process.env.HOST || 'localhost';
+const port = process.env.PORT || '27017';
+const database = process.env.DATABASE || 'Connections';
 const params = process.env.PARAMS || '';
-const secret = process.env.SECRET || '';
+const secret = process.env.SECRET || 'MyLittleSecret';
 
 let uri = 'mongodb://';
 if (username && password) {

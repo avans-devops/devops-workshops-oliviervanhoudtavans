@@ -5,6 +5,16 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express');
 
+const promBundle = require("express-prom-bundle")
+const metricsMiddleware = promBundle({
+  includePath: true,
+  includeStatusCode: true,
+  includePath: true,
+  promClient: {
+    collectDefaultMetrics: {}
+  }
+})
+
 const app = express();
 const cors = require('cors');
 const path = require('path');
@@ -52,6 +62,9 @@ const allowedExt = [
   '.svg',
   '.webmanifest',
 ];
+
+// Use metrics middleware.
+app.use(metricsMiddleware);
 
 // Import routes
 const apiRoutes = require('./api-routes');
